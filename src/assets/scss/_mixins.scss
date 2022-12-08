@@ -1,0 +1,42 @@
+@mixin dflex($just: center, $align: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $just;
+}
+
+@mixin pseudoEl($content: "", $pos: absolute, $top: 0, $zind: -1) {
+  content: $content;
+  position: $pos;
+  top: $top;
+  z-index: $zind;
+}
+
+@mixin sm_tablet_550() {
+  @media screen and (max-width: 550px) {
+    @content;
+  }
+}
+
+@mixin sm_tablet_700() {
+  @media screen and (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin md_laptop_1000() {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin lg_display_1200() {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin lg_display_1360() {
+  @media screen and (max-width: 1360px) {
+    @content;
+  }
+}

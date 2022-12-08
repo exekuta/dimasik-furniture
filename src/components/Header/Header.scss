@@ -1,0 +1,13 @@
+@import "../../../src/assets/scss/variables";
+@import "../../../src/assets/scss/mixins";
+
+.header-container {
+  max-width: 1000%;
+}
+
+.navigation {
+  @include dflex(space-between, center);
+
+  background-color: #000;
+  height: 110px;
+}
