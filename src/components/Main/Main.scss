@@ -17,18 +17,24 @@ $bg-img: url('../../assets/images/main_bg.jpg');
 }
 
 .main-text-container {
-  @include dflex(center, flex-start);
+  @include dflex();
 
   flex-direction: column;
+}
+
+.main-text-flex {
+  @include dflex(space-between, center);
+
+  width: 1200px;
 }
 
 .main-text-wrapper {
   @include dflex(center, flex-start);
   flex-direction: column;
 
-  max-width: 760px;
+  max-width: 860px;
   z-index: 10;
-  padding-left: 5%;
+  
   height: 90vh;
   text-align: start;
 }
@@ -51,4 +57,9 @@ $bg-img: url('../../assets/images/main_bg.jpg');
   top: 0px;
   left: 0px;
   background-image: linear-gradient(to bottom, rgba(4,69,87,0.80), rgba(4,30,56,0.80));
+}
+
+.main-text-buttons {
+  @include dflex(flex-start, center);
+  gap: 30px;
 }
