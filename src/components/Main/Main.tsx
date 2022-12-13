@@ -24,10 +24,10 @@ const Main = () => {
               гарнитуров, гардеробных и шкафов-купе
             </Typography>
             <Box component="div" className="main-text-buttons">
-              <Button variant="contained" className="button">
+              <Button variant="contained" color="warning" sx={{ color: '#fff'}}>
                 Рассчитать стоимость
               </Button>
-              <Button variant="outlined" className="button" sx={{ color: '#fff', borderColor: '#fff'}}>
+              <Button variant="outlined" sx={{ color: '#fff', borderColor: '#fff'}}>
                 Услуги
               </Button>
             </Box>
