@@ -63,3 +63,31 @@ $bg-img: url('../../assets/images/main_bg.jpg');
   @include dflex(flex-start, center);
   gap: 30px;
 }
+
+.main-arrow {
+  position: absolute;
+  bottom: 40px;
+  // fill: #859ab8;
+  left: 0;
+  right: 0;
+  text-align: center;
+  animation: arrow 1.7s infinite ease;
+}
+
+@keyframes arrow {
+  0%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  50%, 55% {
+    -moz-transform: translateY(-7px);
+    -ms-transform: translateY(-7px);
+    -webkit-transform: translateY(-7px);
+    -o-transform: translateY(-7px);
+    transform: translateY(-7px);
+  }
+}
