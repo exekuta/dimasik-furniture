@@ -1,2 +1,22 @@
 @import "../../../src/assets/scss/variables";
 @import "../../../src/assets/scss/mixins";
+
+.services-container {
+  padding: 150px 0 150px 0;
+}
+
+.services-text-container {
+  @include dflex(flex-start, center);
+
+  flex-direction: column;
+}
+
+.services-text-title {
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.services-text-subtitle {
+  max-width: 560px;
+  padding: 0;
+}
