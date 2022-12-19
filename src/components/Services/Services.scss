@@ -2,6 +2,9 @@
 @import "../../../src/assets/scss/mixins";
 
 .services-container {
+  @include dflex();
+
+  flex-direction: column;
   padding: 150px 0 150px 0;
 }
 
@@ -19,4 +22,22 @@
 .services-text-subtitle {
   max-width: 560px;
   padding: 0;
+}
+
+.services-content-container {
+  @include dflex(center, flex-start);
+
+  max-width: 1200px;
+  gap: 30px;
+}
+
+.services-box-item {
+  @include dflex(flex-start, center);
+
+  flex-direction: column;
+}
+
+.services-pics-item {
+  max-height: 260px;
+  margin-bottom: 27px;
 }

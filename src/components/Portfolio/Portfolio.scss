@@ -1,0 +1,10 @@
+@import "../../../src/assets/scss/variables";
+@import "../../../src/assets/scss/mixins";
+
+.portfolio-container {
+  @include dflex();
+
+  flex-direction: column;
+  padding: 120px 0 120px 0;
+  background-color: #f0f0f0;
+}

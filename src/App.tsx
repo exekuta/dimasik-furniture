@@ -2,9 +2,11 @@ import React from 'react';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Services from './components/Services/Services';
+import Portfolio from './components/Portfolio/Portfolio';
 import { Box, CssBaseline } from '@mui/material';
 import './App.scss';
 import MuiTheme from './components/MuiTheme/MuiTheme';
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
           <Header />
           <Main />
           <Services />
+          <Portfolio />
         </Box>
       </React.Fragment>
     </MuiTheme>
