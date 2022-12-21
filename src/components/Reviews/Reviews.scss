@@ -1,14 +1,14 @@
 @import "../../../src/assets/scss/variables";
 @import "../../../src/assets/scss/mixins";
 
-.portfolio-container {
+.reviews-container {
   @include dflex();
 
   flex-direction: column;
-  padding: 120px 0 0 0;
-  background-color: #f0f0f0;
+  padding: 120px 0 150px 0;
+  background-color: #ededed;
 }
 
-.portfolio-image-item {
-  height: 330px;
+.reviews-posts-container {
+  max-width: 760px;
 }

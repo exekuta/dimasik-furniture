@@ -32,7 +32,7 @@ const Portfolio = () => {
       >
         Примеры выполненных работ, которыми гордится наша команда
       </Typography>
-      <ImageList sx={{ width: 1200, height: 665 }} cols={4} rowHeight={330} gap={10}>
+      <ImageList sx={{ width: 1200, height: 660 }} cols={4} rowHeight={320} gap={10}>
         {itemData.map((item) => (
           <Link>
             <ImageListItem key={item.img} sx={{ height: '330px' }}>

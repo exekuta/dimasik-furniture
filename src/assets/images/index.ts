@@ -3,7 +3,7 @@ import portfolio02 from './portfolio02.jpg';
 import portfolio03 from './portfolio03.jpg';
 import portfolio04 from './portfolio04.jpg';
 import portfolio05 from './portfolio05.jpg';
-import portfolio06 from './portfolio06.jpg';
+import portfolio06 from './portfolio06.png';
 import portfolio07 from './portfolio07.jpg';
 import portfolio08 from './portfolio08.jpg';
 
