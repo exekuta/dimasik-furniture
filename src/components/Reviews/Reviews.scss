@@ -2,13 +2,36 @@
 @import "../../../src/assets/scss/mixins";
 
 .reviews-container {
-  @include dflex();
+  display: flex;
 
   flex-direction: column;
   padding: 120px 0 150px 0;
   background-color: #ededed;
 }
 
+.reviews-title {
+  margin-bottom: 60px;
+}
+
 .reviews-posts-container {
+  @include dflex();
+
   max-width: 760px;
+}
+
+.reviews-item {
+  padding: 10px;
+}
+
+.reviews-item-photo {
+  width: 100px;
+  height: 100px;
+
+  border-radius: 3px;
+}
+
+.reviews-item-text {
+  @include dflex();
+
+  flex-direction: column;
 }
