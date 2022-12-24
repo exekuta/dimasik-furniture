@@ -4,6 +4,8 @@ import Main from './components/Main/Main';
 import Services from './components/Services/Services';
 import Portfolio from './components/Portfolio/Portfolio';
 import Reviews from './components/Reviews/Reviews';
+import Reason from './components/Reason/Reason';
+import Prices from './components/Prices/Prices';
 import { Box, CssBaseline } from '@mui/material';
 import './App.scss';
 import MuiTheme from './components/MuiTheme/MuiTheme';
@@ -19,6 +21,8 @@ function App() {
           <Services />
           <Portfolio />
           <Reviews />
+          <Reason />
+          <Prices />
         </Box>
       </React.Fragment>
     </MuiTheme>

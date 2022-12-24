@@ -5,7 +5,7 @@ import './Portfolio.scss';
 
 const Portfolio = () => {
   return (
-    <Box component="div" className="portfolio-container">
+    <Box component="div" className="portfolio-container" id="portfolio">
       <Typography
         component="span"
         sx={{

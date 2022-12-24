@@ -1,0 +1,44 @@
+@import "../../../src/assets/scss/variables";
+@import "../../../src/assets/scss/mixins";
+
+.reason-container {
+  @include dflex();
+
+  flex-direction: column;
+  padding: 150px 0 150px 0;
+}
+
+.reason-title {
+  margin-bottom: 105px;
+}
+
+.reason-items-container {
+  @include dflex();
+
+  flex-wrap: wrap;
+  row-gap: 60px;
+  column-gap: 30px;
+}
+
+.reason-item {
+  @include dflex();
+
+  max-width: 360px;
+}
+
+.reason-item-text {
+  @include dflex(center, flex-start);
+
+  flex-direction: column;
+  width: 80%;
+  padding-left: 20px;
+}
+
+.reason-item-orange {
+  @include dflex();
+
+  background-color: #ff822e;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}

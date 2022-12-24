@@ -16,20 +16,16 @@
 .reviews-posts-container {
   @include dflex();
 
+  flex-direction: column;
   max-width: 760px;
 }
 
 .reviews-item {
+  @include dflex(center, flex-start);
+
+  gap: 30px;
   padding: 10px 25px 10px 10px;
   position: relative;
-}
-
-.reviews-item-tail {
-  position: absolute;
-  border: 9px solid #fff;
-  right: -9px;
-  top: 50%;
-  transform: rotate(-135deg);
 }
 
 .reviews-item-photo {
@@ -39,10 +35,19 @@
   border-radius: 3px;
 }
 
+.reviews-item-tail {
+  position: absolute;
+  border: 9px solid #fff;
+  left: 140px;
+  top: 20%;
+  transform: rotate(-135deg);
+}
+
 .reviews-item-text {
   @include dflex(center, flex-start);
 
   flex-direction: column;
+  width: 80%;
   padding: 25px;
   background-color: #fff;
   border-radius: 3px;

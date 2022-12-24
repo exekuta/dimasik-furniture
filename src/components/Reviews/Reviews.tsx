@@ -1,8 +1,5 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import avatar01 from '../../assets/images/avatar01.jpg';
-import avatar02 from '../../assets/images/avatar02.jpg';
-import avatar03 from '../../assets/images/avatar03.jpg';
 import reviewData from '../../assets/reviews';
 import './Reviews.scss';
 
@@ -23,18 +20,16 @@ const Reviews = () => {
         </Typography>
       </Box>
 
-      <Box component="div" className="reviews-posts-container">
-        <Box component="div" className="reviews-item">
-          <Box
-            component="div"
-            className="reviews-item-photo"
-            sx={{ backgroundImage: `url(${avatar01})` }}
-          ></Box>
-          <Box component="div" className="reviews-item-tail"></Box>
-        </Box>
-        <Box component="div" className="reviews-item-text">
-          {reviewData.map((item) => (
-            <>
+      {reviewData.map((item) => (
+        <Box component="div" className="reviews-posts-container">
+          <Box component="div" className="reviews-item">
+            <Box
+              component="div"
+              className="reviews-item-photo"
+              sx={{ backgroundImage: `url(${item.img})` }}
+            ></Box>
+            <Box component="div" className="reviews-item-tail"></Box>
+            <Box component="div" className="reviews-item-text">
               <Typography
                 component="span"
                 className="reviews-item-title"
@@ -60,10 +55,10 @@ const Reviews = () => {
               >
                 {item.text}
               </Typography>
-            </>
-          ))}
+            </Box>
+          </Box>
         </Box>
-      </Box>
+      ))}
     </Box>
   );
 };

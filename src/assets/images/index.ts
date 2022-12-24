@@ -7,7 +7,7 @@ import portfolio06 from './portfolio06.png';
 import portfolio07 from './portfolio07.jpg';
 import portfolio08 from './portfolio08.jpg';
 
-const itemData = [
+export const itemData = [
   {
     img: `${portfolio01}`,
     title: 'Portfolio 01',
