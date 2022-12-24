@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 import avatar01 from '../../assets/images/avatar01.jpg';
 import avatar02 from '../../assets/images/avatar02.jpg';
 import avatar03 from '../../assets/images/avatar03.jpg';
+import reviewData from '../../assets/reviews';
 import './Reviews.scss';
 
 const Reviews = () => {
@@ -32,36 +33,36 @@ const Reviews = () => {
           <Box component="div" className="reviews-item-tail"></Box>
         </Box>
         <Box component="div" className="reviews-item-text">
-            <Typography
-              component="span"
-              className="reviews-item-title"
-              sx={{
-                fontSize: '16px',
-                fontWeight: '600',
-                lineHeight: '1.35',
-              }}
-            >
-              Nickname
-            </Typography>
-            <Typography
-              component="span"
-              className="reviews-item-subtitle"
-              sx={{
-                fontSize: '15px',
-                fontWeight: '300',
-                lineHeight: '1.55',
-                marginTop: '10px',
-              }}
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Typography>
-          </Box>
+          {reviewData.map((item) => (
+            <>
+              <Typography
+                component="span"
+                className="reviews-item-title"
+                sx={{
+                  fontSize: '16px',
+                  fontWeight: '600',
+                  lineHeight: '1.35',
+                  textAlign: 'start',
+                }}
+              >
+                {item.nickname}
+              </Typography>
+              <Typography
+                component="span"
+                className="reviews-item-subtitle"
+                sx={{
+                  fontSize: '15px',
+                  fontWeight: '300',
+                  lineHeight: '1.55',
+                  marginTop: '10px',
+                  textAlign: 'start',
+                }}
+              >
+                {item.text}
+              </Typography>
+            </>
+          ))}
+        </Box>
       </Box>
     </Box>
   );

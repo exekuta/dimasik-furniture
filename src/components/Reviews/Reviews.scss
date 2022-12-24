@@ -5,7 +5,7 @@
   display: flex;
 
   flex-direction: column;
-  padding: 120px 0 150px 0;
+  padding: 120px 0 150px 100px;
   background-color: #ededed;
 }
 
@@ -20,7 +20,16 @@
 }
 
 .reviews-item {
-  padding: 10px;
+  padding: 10px 25px 10px 10px;
+  position: relative;
+}
+
+.reviews-item-tail {
+  position: absolute;
+  border: 9px solid #fff;
+  right: -9px;
+  top: 50%;
+  transform: rotate(-135deg);
 }
 
 .reviews-item-photo {
@@ -31,7 +40,10 @@
 }
 
 .reviews-item-text {
-  @include dflex();
+  @include dflex(center, flex-start);
 
   flex-direction: column;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 3px;
 }
