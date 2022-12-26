@@ -1,6 +1,5 @@
 @import "../../../src/assets/scss/variables";
 @import "../../../src/assets/scss/mixins";
-$prices-bg-img: url('../../assets/images/prices_bg.jpg');
 
 .prices-container {
   @include dflex();
@@ -20,7 +19,7 @@ $prices-bg-img: url('../../assets/images/prices_bg.jpg');
   position: absolute;
   top: 0px;
   left: 0px;
-  background-image: linear-gradient(to bottom, rgba(4,69,87,0.80), rgba(4,30,56,0.80));
+  background-image: $bg-blue-cover;
 }
 
 .prices-title {
@@ -31,19 +30,23 @@ $prices-bg-img: url('../../assets/images/prices_bg.jpg');
 .prices-subtitle {
   z-index: 10;
   max-width: 600px;
-  margin-bottom: 25px;
+  margin-bottom: 75px;
 }
 
 .prices-inputs {
   @include dflex();
 
   gap: 20px;
+  width: 960px;
 }
 
 .input-item {
   width: 25%;
   z-index: 10;
   height: 56px;
+  // padding-left: 20px;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
 .submit-button {
