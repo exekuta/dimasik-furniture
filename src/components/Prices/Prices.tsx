@@ -1,8 +1,23 @@
 import React from 'react';
 import { Box, Button, TextField, Typography } from '@mui/material';
+import { useForm, SubmitHandler } from "react-hook-form";
 import './Prices.scss';
 
+interface IFormInput {
+  firstName: string;
+  phoneNumber: string;
+  eMail: string;
+}
+
 const Prices = () => {
+  const { control, handleSubmit } = useForm({
+    defaultValues: {
+      firstName: '',
+      phoneNumber: '',
+      eMail: '',
+    }
+  });
+
   return (
     <Box component="div" className="prices-container">
       <Box component="div" className="prices-bg-cover" />
@@ -39,21 +54,21 @@ const Prices = () => {
           label="Имя" 
           variant="outlined"
           fullWidth
-          autoFocus={ true }
+          required
         />
         <TextField
           className="input-item"
           label="Телефон" 
           variant="outlined"
           fullWidth
-          autoFocus={ false }
+          required
         />
         <TextField
           className="input-item"
           label="e-mail" 
           variant="outlined"
           fullWidth
-          autoFocus={ false }
+          required
         />
         <Button
           variant="contained"
