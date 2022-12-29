@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import reasonData from '../../assets/reason';
+import reasonData from '../../assets/data/reason';
 import './Reason.scss';
 
 const Reason = () => {

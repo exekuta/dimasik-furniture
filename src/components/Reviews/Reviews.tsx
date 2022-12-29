@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import reviewData from '../../assets/reviews';
+import reviewData from '../../assets/data/reviews';
 import './Reviews.scss';
 
 const Reviews = () => {

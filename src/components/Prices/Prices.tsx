@@ -31,7 +31,7 @@ const Prices = () => {
             lineHeight: '1.23',
           }}
         >
-          Расчет стоимости ремонта бесплатно
+          Расчет стоимости работ бесплатно
         </Typography>
       </Box>
       <Box component="div" className="prices-subtitle">
@@ -55,6 +55,7 @@ const Prices = () => {
           variant="outlined"
           fullWidth
           required
+          sx={{ width: '25%'}}
         />
         <TextField
           className="input-item"
@@ -62,6 +63,7 @@ const Prices = () => {
           variant="outlined"
           fullWidth
           required
+          sx={{ width: '25%'}}
         />
         <TextField
           className="input-item"
@@ -69,6 +71,7 @@ const Prices = () => {
           variant="outlined"
           fullWidth
           required
+          sx={{ width: '25%'}}
         />
         <Button
           variant="contained"

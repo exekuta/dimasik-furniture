@@ -1,6 +1,6 @@
-import avatar01 from '../images/avatar01.jpg';
-import avatar02 from '../images/avatar02.jpg';
-import avatar03 from '../images/avatar03.jpg';
+import avatar01 from '../../images/avatar01.jpg';
+import avatar02 from '../../images/avatar02.jpg';
+import avatar03 from '../../images/avatar03.jpg';
 
 const reviewData = [
   {
