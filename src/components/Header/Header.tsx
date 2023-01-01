@@ -22,8 +22,8 @@ const Header = () => {
             <Link href="#portfolio" underline="none" color="white" className="nav-links">
               Работы
             </Link>
-            <Link href="#prices" underline="none" color="white" className="nav-links">
-              Цены
+            <Link href="#calc" underline="none" color="white" className="nav-links">
+              Расчет
             </Link>
             <Link href="#contacts" underline="none" color="white" className="nav-links">
               Контакты

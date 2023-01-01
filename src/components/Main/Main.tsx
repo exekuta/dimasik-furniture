@@ -24,32 +24,36 @@ const Main = () => {
               и гарнитуров, гардеробных и шкафов-купе
             </Typography>
             <Box component="div" className="main-text-buttons">
-              <Button
-                variant="contained"
-                color="warning"
-                sx={{
-                  color: '#fff',
-                  textTransform: 'none',
-                  height: '60px',
-                  padding: '0 60px 0 60px',
-                  fontWeight: '700',
-                }}
-              >
-                Рассчитать стоимость
-              </Button>
-              <Button
-                variant="outlined"
-                sx={{
-                  color: '#fff',
-                  borderColor: '#fff',
-                  textTransform: 'none',
-                  height: '60px',
-                  padding: '0 60px 0 60px',
-                  fontWeight: '700',
-                }}
-              >
-                Услуги
-              </Button>
+              <Link href="#calc" underline="none" color="white">
+                <Button
+                  variant="contained"
+                  color="warning"
+                  sx={{
+                    color: '#fff',
+                    textTransform: 'none',
+                    height: '60px',
+                    padding: '0 60px 0 60px',
+                    fontWeight: '700',
+                  }}
+                >
+                  Рассчитать стоимость
+                </Button>
+              </Link>
+              <Link href="#services" underline="none" color="white">
+                <Button
+                  variant="outlined"
+                  sx={{
+                    color: '#fff',
+                    borderColor: '#fff',
+                    textTransform: 'none',
+                    height: '60px',
+                    padding: '0 60px 0 60px',
+                    fontWeight: '700',
+                  }}
+                >
+                  Услуги
+                </Button>
+              </Link>
             </Box>
             <Box component="div" className="main-arrow">
               <Link href="#services">

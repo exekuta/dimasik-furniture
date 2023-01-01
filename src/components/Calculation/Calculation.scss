@@ -1,0 +1,30 @@
+@import "../../../src/assets/scss/variables";
+@import "../../../src/assets/scss/mixins";
+
+.calc-container {
+  @include dflex();
+
+  background-color: #ff822e;
+  flex-direction: column;
+  padding: 150px 0 150px 0;
+}
+
+.calc-title {
+  margin-bottom: 25px;
+}
+
+.calc-subtitle {
+  max-width: 600px;
+}
+
+.calc-arrow-button {
+  @include dflex();
+
+  position: relative;
+}
+
+.calc-arrow {
+  position: absolute;
+  top: 60px;
+  left: -70px;
+}

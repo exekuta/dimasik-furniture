@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, TextField, Typography } from '@mui/material';
 import { useForm, SubmitHandler } from "react-hook-form";
-import './Prices.scss';
+import './CalcForm.scss';
 
 interface IFormInput {
   firstName: string;
@@ -9,7 +9,7 @@ interface IFormInput {
   eMail: string;
 }
 
-const Prices = () => {
+const CalcForm = () => {
   const { control, handleSubmit } = useForm({
     defaultValues: {
       firstName: '',
@@ -19,7 +19,7 @@ const Prices = () => {
   });
 
   return (
-    <Box component="div" className="prices-container">
+    <Box component="div" className="prices-container" id="calc">
       <Box component="div" className="prices-bg-cover" />
       <Box component="div" className="prices-title">
         <Typography
@@ -92,4 +92,4 @@ const Prices = () => {
   );
 };
 
-export default Prices;
+export default CalcForm;
