@@ -21,7 +21,7 @@ const Stages = () => {
       </Box>
       <Box component="div" className="stages-items-container">
         {stagesData.map((item) => (
-        <Box component="div" className="stages-item">
+        <Box component="div" className="stages-item" key={item.id}>
           <Box component="div" className="stages-item-orange">
             <Typography
               component="span"

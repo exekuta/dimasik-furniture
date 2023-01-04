@@ -21,7 +21,7 @@ const Reason = () => {
       </Box>
       <Box component="div" className="reason-items-container">
         {reasonData.map((item) => (
-          <Box component="div" className="reason-item">
+          <Box component="div" className="reason-item" key={item.id}>
             <Box component="div" className="reason-item-orange">
               <Typography
                 component="span"

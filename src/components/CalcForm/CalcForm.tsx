@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { Box, Button, TextField, Typography } from '@mui/material';
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 import './CalcForm.scss';
 
 interface IFormInput {
@@ -10,13 +11,36 @@ interface IFormInput {
 }
 
 const CalcForm = () => {
-  const { control, handleSubmit } = useForm({
-    defaultValues: {
-      firstName: '',
-      phoneNumber: '',
-      eMail: '',
-    }
-  });
+  const {
+    register,
+    reset,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IFormInput>();
+
+  const form = useRef();
+
+  const sendEmail = (formData: any) => {
+    console.log(formData);
+    emailjs
+      .sendForm(
+        'service_n9kqgow',
+        'template_x7cbix7',
+        formData,
+        'sUf6KBe1LfdJD21A_'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert('Сообщение отправлено!');
+        },
+        (error) => {
+          console.log(error.text);
+          alert('Произошла ошибка!');
+        }
+      );
+    reset();
+  };
 
   return (
     <Box component="div" className="prices-container" id="calc">
@@ -48,32 +72,69 @@ const CalcForm = () => {
           расчет в течение 24 часов и свяжемся с вами
         </Typography>
       </Box>
-      <Box component="form" className="prices-inputs">
+      <Box
+        component="form"
+        className="prices-inputs"
+        ref={form}
+        onSubmit={handleSubmit(sendEmail)}
+      >
         <TextField
           className="input-item"
-          label="Имя" 
+          {...register('firstName', {
+            // required: 'Это поле обязательно для заполнения',
+            minLength: {
+              value: 3,
+              message: 'Минимальная длина 3 символов для имени',
+            },
+            maxLength: {
+              value: 30,
+              message: 'Максимальная длина 30 символов для имени',
+            },
+            pattern: /^[A-Za-z]+$/i,
+          })}
+          label="Имя"
           variant="outlined"
+          name="user_name"
           fullWidth
-          required
-          sx={{ width: '25%'}}
+          sx={{ width: '25%' }}
         />
         <TextField
           className="input-item"
-          label="Телефон" 
+          {...register('phoneNumber', {
+            // required: 'Это поле обязательно для заполнения',
+            minLength: {
+              value: 8,
+              message: 'Минимальная длина 8 символов для имени',
+            },
+            maxLength: {
+              value: 11,
+              message: 'Максимальная длина 11 символов для имени',
+            },
+          })}
+          label="Телефон"
           variant="outlined"
+          name="contact_number"
           fullWidth
-          required
-          sx={{ width: '25%'}}
+          sx={{ width: '25%' }}
         />
         <TextField
           className="input-item"
-          label="e-mail" 
+          {...register('eMail', {
+            // required: 'Это поле обязательно для заполнения',
+            pattern: {
+              value:
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+              message: 'Неправильный e-mail',
+            },
+          })}
+          label="e-mail"
           variant="outlined"
+          name="user_mail"
           fullWidth
-          required
-          sx={{ width: '25%'}}
+          sx={{ width: '25%' }}
         />
         <Button
+          type="submit"
           variant="contained"
           color="warning"
           sx={{
@@ -87,6 +148,29 @@ const CalcForm = () => {
         >
           Отправить заявку
         </Button>
+      </Box>
+      <Box component="div" className="error_message">
+        {errors?.firstName?.message && (
+          <Box component="div" sx={{ width: '25%'}}>
+            <Typography variant="inherit" component="p">
+              ⚠ {errors?.firstName?.message}
+            </Typography>
+          </Box>
+        )}
+        {errors?.phoneNumber?.message && (
+          <Box component="div" sx={{ width: '24%'}}>
+            <Typography variant="inherit" component="p">
+              ⚠ {errors?.phoneNumber?.message}
+            </Typography>
+          </Box>
+        )}
+        {errors?.eMail?.message && (
+          <Box component="div" sx={{ width: '24%'}}>
+            <Typography variant="inherit" component="p">
+              ⚠ {errors?.eMail?.message}
+            </Typography>
+          </Box>
+        )}
       </Box>
     </Box>
   );

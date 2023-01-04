@@ -34,8 +34,8 @@ const Portfolio = () => {
       </Typography>
       <ImageList sx={{ width: 1200, height: 660 }} cols={4} rowHeight={320} gap={10}>
         {itemData.map((item) => (
-          <Link>
-            <ImageListItem key={item.img} sx={{ height: '330px' }}>
+          <Link key={item.id}>
+            <ImageListItem sx={{ height: '330px' }}>
               <img
                 src={item.img}
                 srcSet={item.img}

@@ -21,7 +21,7 @@ const Reviews = () => {
       </Box>
 
       {reviewData.map((item) => (
-        <Box component="div" className="reviews-posts-container">
+        <Box component="div" className="reviews-posts-container" key={item.id}>
           <Box component="div" className="reviews-item">
             <Box
               component="div"

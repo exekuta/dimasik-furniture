@@ -49,6 +49,16 @@
   background-color: #fff;
 }
 
+.error_message {
+  @include dflex(flex-start, center); 
+
+  width: 960px;
+  gap: 20px;
+  color: red;
+  z-index: 10;
+  margin-top: 10px;
+}
+
 .submit-button {
   z-index: 10;
 }
