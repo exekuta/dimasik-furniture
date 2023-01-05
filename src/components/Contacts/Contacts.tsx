@@ -33,7 +33,7 @@ const Contacts = () => {
             lineHeight: '1.55',
           }}
         >
-          Адрес нашего офиса: Сабира Ахтямова, 1 к1.
+          Адрес нашего офиса: ул. Сабира Ахтямова, 1 к1.
         </Typography>
       </Box>
       <Box component="div" className="contacts-socials-links">
