@@ -1,24 +1,9 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { Box, Button, TextField, Typography } from '@mui/material';
-// import { useForm, Controller } from 'react-hook-form';
 import './CalcForm.scss';
 
-// interface IFormInput {
-//   firstName: string;
-//   phoneNumber: string;
-//   eMail: string;
-//   currentTarget: string | HTMLFormElement;
-// }
-
 const CalcForm = () => {
-  // const {
-  //   register,
-  //   reset,
-  //   control,
-  //   handleSubmit,
-  //   formState: { errors },
-  // } = useForm<IFormInput>();
 
   const form = useRef<HTMLFormElement>();
 
@@ -42,7 +27,6 @@ const CalcForm = () => {
           alert('Произошла ошибка!');
         }
       );
-    // reset();
   };
 
   return (
@@ -83,18 +67,6 @@ const CalcForm = () => {
       >
         <TextField
           className="input-item"
-          // {...register('firstName', {
-          //   // required: 'Это поле обязательно для заполнения',
-          //   minLength: {
-          //     value: 3,
-          //     message: 'Минимальная длина 3 символов для имени',
-          //   },
-          //   maxLength: {
-          //     value: 30,
-          //     message: 'Максимальная длина 30 символов для имени',
-          //   },
-          //   pattern: /^[A-Za-z]+$/i,
-          // })}
           label="Имя"
           variant="outlined"
           name="user_name"
@@ -104,17 +76,6 @@ const CalcForm = () => {
         />
         <TextField
           className="input-item"
-          // {...register('phoneNumber', {
-          //   // required: 'Это поле обязательно для заполнения',
-          //   minLength: {
-          //     value: 8,
-          //     message: 'Минимальная длина 8 символов для имени',
-          //   },
-          //   maxLength: {
-          //     value: 11,
-          //     message: 'Максимальная длина 11 символов для имени',
-          //   },
-          // })}
           label="Телефон"
           variant="outlined"
           name="contact_number"
@@ -124,14 +85,6 @@ const CalcForm = () => {
         />
         <TextField
           className="input-item"
-          // {...register('eMail', {
-          //   // required: 'Это поле обязательно для заполнения',
-          //   pattern: {
-          //     value:
-          //       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-          //     message: 'Неправильный e-mail',
-          //   },
-          // })}
           label="e-mail"
           variant="outlined"
           name="user_mail"
@@ -155,29 +108,6 @@ const CalcForm = () => {
           Отправить заявку
         </Button>
       </Box>
-      {/* <Box component="div" className="error_message">
-        {errors?.firstName?.message && (
-          <Box component="div" sx={{ width: '25%' }}>
-            <Typography variant="inherit" component="p">
-              ⚠ {errors?.firstName?.message}
-            </Typography>
-          </Box>
-        )}
-        {errors?.phoneNumber?.message && (
-          <Box component="div" sx={{ width: '24%' }}>
-            <Typography variant="inherit" component="p">
-              ⚠ {errors?.phoneNumber?.message}
-            </Typography>
-          </Box>
-        )}
-        {errors?.eMail?.message && (
-          <Box component="div" sx={{ width: '24%' }}>
-            <Typography variant="inherit" component="p">
-              ⚠ {errors?.eMail?.message}
-            </Typography>
-          </Box>
-        )}
-      </Box> */}
     </Box>
   );
 };
