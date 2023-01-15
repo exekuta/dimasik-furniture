@@ -6,17 +6,17 @@ import './Portfolio.scss';
 
 const Portfolio = () => {
   const [open, setOpen] = useState(false);
+  const [clickedImage, setClickedImage] = useState(0);
 
-  const handleOpen = (id: string) => {
-    const clickedImage = itemData.find((image: { id: string }) => image.id === id);
-    console.log(clickedImage);
+  const handleOpen = (id: number) => {
+    const clickedImage = itemData.find((image: { id: number }) => image.id === id);
+    
+    if (clickedImage?.id !== undefined) {
+      setClickedImage(clickedImage?.id - 1);
+    }
     setOpen(true);
   };
   const handleClose = () => setOpen(false);
-
-  
-  
-    // setClickedCard(clickedCard);
   
   return (
     <Box component="div" className="portfolio-container" id="portfolio">
@@ -65,7 +65,7 @@ const Portfolio = () => {
           </Link>
         ))}
       </ImageList>
-      <Lightbox showModal={open} closeModal={handleClose}/>
+      <Lightbox showModal={open} closeModal={handleClose} clickedImage={clickedImage}/>
     </Box>
   );
 };

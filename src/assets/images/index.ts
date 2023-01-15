@@ -17,42 +17,42 @@ import portfolio08_full from './portfolio08_full.jpg';
 
 export const itemData = [
   {
-    id: '1',
+    id: 1,
     img: `${portfolio01}`,
     title: 'Portfolio 01',
   },
   {
-    id: '2',
+    id: 2,
     img: `${portfolio02}`,
     title: 'Portfolio 02',
   },
   {
-    id: '3',
+    id: 3,
     img: `${portfolio03}`,
     title: 'Portfolio 03',
   },
   {
-    id: '4',
+    id: 4,
     img: `${portfolio04}`,
     title: 'Portfolio 04',
   },
   {
-    id: '5',
+    id: 5,
     img: `${portfolio05}`,
     title: 'Portfolio 05',
   },
   {
-    id: '6',
+    id: 6,
     img: `${portfolio06}`,
     title: 'Portfolio 06',
   },
   {
-    id: '7',
+    id: 7,
     img: `${portfolio07}`,
     title: 'Portfolio 07',
   },
   {
-    id: '8',
+    id: 8,
     img: `${portfolio08}`,
     title: 'Portfolio 08',
   },
@@ -60,42 +60,42 @@ export const itemData = [
 
 export const fullImagesData = [
   {
-    id: '1',
+    id: 1,
     img: `${portfolio01_full}`,
     title: 'Portfolio 01 full',
   },
   {
-    id: '2',
+    id: 2,
     img: `${portfolio02_full}`,
     title: 'Portfolio 02 full',
   },
   {
-    id: '3',
+    id: 3,
     img: `${portfolio03_full}`,
     title: 'Portfolio 03 full',
   },
   {
-    id: '4',
+    id: 4,
     img: `${portfolio04_full}`,
     title: 'Portfolio 04 full',
   },
   {
-    id: '5',
+    id: 5,
     img: `${portfolio05_full}`,
     title: 'Portfolio 05 full',
   },
   {
-    id: '6',
+    id: 6,
     img: `${portfolio06_full}`,
     title: 'Portfolio 06 full',
   },
   {
-    id: '7',
+    id: 7,
     img: `${portfolio07_full}`,
     title: 'Portfolio 07 full',
   },
   {
-    id: '8',
+    id: 8,
     img: `${portfolio08_full}`,
     title: 'Portfolio 08 full',
   },

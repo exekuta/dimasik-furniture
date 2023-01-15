@@ -12,9 +12,10 @@ import 'swiper/css/navigation';
 interface ILightBoxProps {
   showModal: boolean;
   closeModal: () => void;
+  clickedImage: number;
 }
 
-const Lightbox: FC<ILightBoxProps> = ({ showModal, closeModal }) => {
+const Lightbox: FC<ILightBoxProps> = ({ showModal, closeModal, clickedImage }) => {
   return (
     <Modal open={showModal} onClose={closeModal} className="lightbox-flex">
       <Box component="div" className="lightbox-container">
@@ -26,6 +27,7 @@ const Lightbox: FC<ILightBoxProps> = ({ showModal, closeModal }) => {
             clickable: true,
           }}
           navigation={true}
+          initialSlide={clickedImage}
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
